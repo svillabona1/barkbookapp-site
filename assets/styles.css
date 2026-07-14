@@ -1,0 +1,158 @@
+/* BarkBook marketing/legal site — shared stylesheet.
+   Evergreen Park: deep-pine ground, off-white text, honey-gold accents,
+   logo teal (#5CB89F) where the mark appears. Mobile-first, no framework,
+   no build step. System font stack so it paints instantly on a phone opened
+   from an email. */
+
+:root {
+  --pine:       #14261E; /* deep-pine page ground */
+  --pine-raised:#1D3629; /* cards / raised panels */
+  --pine-line:  #2C4A3B; /* hairline borders */
+  --ink:        #F2F5F0; /* off-white body text */
+  --muted:      #A6C0B2; /* secondary text */
+  --gold:       #F2C14E; /* honey-gold accent */
+  --gold-soft:  #FBE9C7; /* pale gold (notices) */
+  --teal:       #5CB89F; /* the logo mark teal */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--pine);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 22px 64px;
+}
+
+/* ---- header / brand ---- */
+.brand {
+  display: block;
+  text-align: center;
+  margin: 8px 0 28px;
+}
+.brand img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+.brand .mark {
+  width: 96px;
+  height: 96px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+/* ---- type ---- */
+h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 30px 0 8px;
+}
+h3 { font-size: 17px; font-weight: 700; margin: 20px 0 6px; }
+p { margin: 0 0 14px; }
+a { color: var(--gold); text-underline-offset: 2px; }
+a:hover { color: #ffd97a; }
+strong { font-weight: 700; }
+.lede {
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.muted { color: var(--muted); font-size: 15px; }
+.center { text-align: center; }
+.big-emoji { font-size: 48px; margin: 0 0 8px; line-height: 1; }
+
+ul { margin: 0 0 14px; padding-left: 22px; }
+li { margin: 0 0 8px; }
+
+/* ---- panels ---- */
+.card {
+  background: var(--pine-raised);
+  border: 1px solid var(--pine-line);
+  border-radius: 22px;
+  padding: 26px 24px;
+  box-shadow: var(--shadow);
+}
+.notice {
+  background: var(--gold-soft);
+  color: #6b4e12;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-weight: 800;
+  font-size: 14px;
+  margin: 0 0 22px;
+}
+
+/* honey-gold accent rule under the hero pitch */
+.accent-rule {
+  width: 56px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 999px;
+  margin: 22px auto 26px;
+}
+
+/* ---- feature blurbs ---- */
+.features {
+  display: grid;
+  gap: 14px;
+  margin: 8px 0 26px;
+}
+.feature {
+  background: var(--pine-raised);
+  border: 1px solid var(--pine-line);
+  border-radius: 18px;
+  padding: 18px 20px;
+}
+.feature .emoji { font-size: 26px; }
+.feature h3 { margin: 6px 0 4px; }
+.feature p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* teal pill used for the mark accent / status line */
+.soon {
+  display: inline-block;
+  background: rgba(92, 184, 159, 0.14);
+  color: var(--teal);
+  border: 1px solid rgba(92, 184, 159, 0.4);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* ---- footer ---- */
+.foot {
+  margin-top: 40px;
+  padding-top: 22px;
+  border-top: 1px solid var(--pine-line);
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.foot a { color: var(--muted); }
+.foot a:hover { color: var(--ink); }
+.foot .dot { opacity: 0.5; padding: 0 8px; }
+
+/* wider breathing room on larger screens */
+@media (min-width: 560px) {
+  .wrap { padding-top: 48px; }
+  h1 { font-size: 34px; }
+}
