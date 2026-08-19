@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BarkBook Privacy Policy (Draft)</title>
+    <title>BarkBook Privacy Policy</title>
     <meta
       name="description"
-      content="How BarkBook handles data, with extra care for kids under 13. Draft v0.1."
+      content="How BarkBook handles data, with extra care for kids under 13."
     />
     <meta name="theme-color" content="#14261E" />
-    <meta name="robots" content="noindex" />
     <link rel="icon" type="image/png" href="/assets/barkbook-mark-512.png" />
     <link rel="apple-touch-icon" href="/assets/barkbook-mark-512.png" />
     <link rel="stylesheet" href="/assets/styles.css" />
@@ -21,73 +20,85 @@
       </a>
 
       <main class="card">
-        <!-- VERBATIM port of supabase/functions/privacy-policy (v0.1 DRAFT).
-             Only change from source: ${REPLY_TO} rendered as the public
-             privacy@barkbookapp.com contact address. Text is reviewed
-             separately — do not edit copy here. -->
-        <p class="notice">⚠️ v0.1 DRAFT — under review, not yet final.</p>
-
+        <!-- Canonical policy text lives HERE; the privacy-policy edge function is
+             redirect-only. -->
         <h1>BarkBook Privacy Policy</h1>
         <p class="muted">
-          Draft v0.1 · plain-language summary of how BarkBook handles data, with
-          extra care for kids under 13.
+          Last updated: August 18, 2026 · plain-language summary of how BarkBook
+          handles data, with extra care for kids under 13.
         </p>
 
         <h2>The short version</h2>
         <p>
           BarkBook is a game where you collect the dog breeds you meet in real
-          life. By default everything lives only on your device. If you make an
-          account and turn on cloud backup, we store your collection so it's safe
-          and can move to a new phone. We don't sell your data, we don't show
-          ads, and we never use children's photos to train AI.
+          life. You need a free account to use the scanner, and your collection
+          is stored in your account so it's safe if you lose your phone. We don't
+          sell your data, we don't show ads, and we never use your photos to
+          train AI. For kids under 13, nothing is stored in the cloud until a
+          parent says yes.
         </p>
 
         <h2>What we collect</h2>
         <ul>
           <li>
             <strong>Account:</strong> your email address and birthdate (used to
-            know whether you're under 13).
+            know whether you're under 13). We also keep a count of your weekly
+            scans to enforce the free scan limit.
           </li>
           <li>
             <strong>Parent email (kids under 13 only):</strong> collected solely
-            to ask a parent/guardian for consent. If consent isn't given,
-            <strong>we delete the parent email after 14 days</strong> and store
-            nothing else.
+            to ask a parent/guardian for consent. If consent isn't given, we
+            delete the parent email after 14 days and store nothing else.
           </li>
           <li>
-            <strong>Your collection (only if you turn on cloud backup):</strong>
-            the dog breeds you've logged, your progress and notes, and any dog
-            photos you chose to save. Photos are private to your account, never
-            public, never sold, and
-            <strong
-              >never used to train AI for accounts belonging to children under
-              13</strong
-            >.
+            <strong>Your collection:</strong> the dog breeds you've logged, your
+            notes and progress, where you met each dog if you add a location, and
+            any dog photos you chose to save. Photos are private to your account,
+            never public, never sold, and never used to train AI — anyone's, any
+            age.
           </li>
         </ul>
 
         <h2>Scan photos</h2>
         <p>
           When you scan a dog, the photo is sent to our AI provider (Anthropic)
-          only to identify the breed, and is processed
-          <strong>transiently</strong> for that request — it isn't retained for
-          training on your behalf.
+          only to identify the breed, and is processed transiently for that
+          request — it isn't retained or used for training.
+        </p>
+
+        <h2>Feedback you send us</h2>
+        <p>
+          If you send feedback ("Send a Bark"), we receive your message, and —
+          only if you choose to include them — a screenshot and basic app info
+          (app version, browser, theme, how many breeds you've met). Screenshots
+          are stored in our private storage and used only to understand and fix
+          problems. Feedback text and app info are managed in our issue tracker
+          (hosted by GitHub). Email us to have your feedback deleted.
         </p>
 
         <h2>What we never do</h2>
         <p>
           No selling data. No advertising trackers. No making your collection or
           photos public. No sharing with third parties except the infrastructure
-          needed to run the app (our database/host and the AI breed-identifier).
+          needed to run the app: our database and hosting (Supabase), the AI
+          breed-identifier (Anthropic), our email provider (Resend), and our
+          issue tracker for feedback (GitHub). We may use and share aggregated,
+          de-identified statistics that can't identify you or your dogs — like
+          "which breeds are spotted most" — to understand and improve BarkBook.
+        </p>
+
+        <h2>If BarkBook changes hands</h2>
+        <p>
+          If BarkBook is ever acquired or merged into another company, your data
+          may transfer as part of that change — the new owner has to honor this
+          policy or notify you before doing anything different with your data.
         </p>
 
         <h2>How long we keep things</h2>
         <ul>
-          <li>Delete your account and its data any time on request.</li>
+          <li>Delete your account and its data any time — email us and we'll erase it.</li>
           <li>Unconfirmed parent emails: deleted after 14 days.</li>
-          <li>
-            Inactive children's accounts (no activity for 18 months) are deleted.
-          </li>
+          <li>Children's accounts inactive for 18 months are deleted.</li>
         </ul>
 
         <h2>Parents' rights (COPPA)</h2>
@@ -112,9 +123,6 @@
               >privacy@barkbookapp.com</a
             ></strong
           >.
-        </p>
-        <p class="muted">
-          This is a working draft and will be finalized before public launch.
         </p>
       </main>
 
