@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opening Barkbook…</title>
+    <!-- A forwarder, not a page: never index it, and never let it win a search
+         result over barkbookapp.com itself. -->
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#14261E" />
+    <link rel="icon" type="image/png" href="/assets/barkbook-mark-512.png" />
+    <link rel="apple-touch-icon" href="/assets/barkbook-mark-512.png" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+
+    <!-- ┌──────────────────────────────────────────────────────────────────┐
+         │ THE ONLY LINE TO CHANGE when hosting moves / the App Store       │
+         │ smart-link lands. Keep it in sync with BARKBOOK_URL below.       │
+         └──────────────────────────────────────────────────────────────────┘ -->
+    <meta http-equiv="refresh" content="0;url=https://sav-mm.tailf0defa.ts.net/" />
+    <script>
+      // THE ONLY LINE TO CHANGE when hosting moves / the App Store smart-link
+      // lands (keep the <meta http-equiv="refresh"> above identical).
+      var BARKBOOK_URL = "https://sav-mm.tailf0defa.ts.net/";
+
+      // Carry the query string and hash across, so an invite link like
+      // /app?from=stephen keeps its tracking when Barkbook opens. Anything the
+      // target already carries in its own URL is preserved and ours appended.
+      (function () {
+        var target = BARKBOOK_URL;
+        var search = location.search;
+        var hash = location.hash;
+        if (search) target += (target.indexOf("?") === -1 ? "?" : "&") + search.slice(1);
+        if (hash) target += hash;
+        // replace(), not assign(): Back should return to wherever the user came
+        // from, not bounce them through this forwarder again.
+        location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <main class="card center">
+        <p class="big-emoji">🐾</p>
+        <h1>Taking you to Barkbook…</h1>
+        <!-- Only ever seen if BOTH the script and the meta refresh are blocked. -->
+        <p>
+          Not moving?
+          <a id="fallback" href="https://sav-mm.tailf0defa.ts.net/"
+            >https://sav-mm.tailf0defa.ts.net/</a
+          >
+        </p>
+      </main>
+    </div>
+    <script>
+      // Only reached if location.replace() above was blocked but scripts still run
+      // — keep the visible link carrying any query string the invite passed.
+      (function () {
+        var a = document.getElementById("fallback");
+        if (a && location.search && typeof BARKBOOK_URL === "string") {
+          a.href = BARKBOOK_URL + "?" + location.search.slice(1) + location.hash;
+        }
+      })();
+    </script>
+  </body>
+</html>
