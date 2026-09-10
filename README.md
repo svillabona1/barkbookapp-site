@@ -1,11 +1,11 @@
 # barkbookapp.com
 
-The **public** marketing + legal site for **BarkBook** — a gamified "Pokédex for
+The **public** marketing + legal site for **Barkbook** — a gamified "Pokédex for
 real dogs" PWA (scan the dogs you meet, ID the breed, collect them in a journal).
 
 This repo is intentionally **public** because GitHub Pages' free tier only serves
 public repos. It contains **no application code, no secrets, and no user data** —
-just static HTML/CSS and two image assets. The BarkBook app itself (and its
+just static HTML/CSS and two image assets. The Barkbook app itself (and its
 backend) lives in a separate **private** repo and is served from its own origin;
 nothing here talks to it.
 
@@ -24,7 +24,7 @@ Plain static HTML/CSS — no framework, no build step, no JavaScript.
   fixes a shared-domain content-type limitation on `*.supabase.co`). Every
   outcome state gets a real page so no parent ever lands on a bare 404.
 - `404.html` — branded not-found (GitHub Pages serves it automatically).
-- `assets/` — shared stylesheet, the BarkBook banner, and a 512px square mark.
+- `assets/` — shared stylesheet, the Barkbook banner, and a 512px square mark.
 
 ## Hosting
 
