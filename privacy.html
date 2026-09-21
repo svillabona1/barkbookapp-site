@@ -24,7 +24,7 @@
              redirect-only. -->
         <h1>Barkbook Privacy Policy</h1>
         <p class="muted">
-          Last updated: August 18, 2026 · plain-language summary of how Barkbook
+          Last updated: September 17, 2026 · plain-language summary of how Barkbook
           handles data, with extra care for kids under 13.
         </p>
 
@@ -62,8 +62,23 @@
         <h2>Scan photos</h2>
         <p>
           When you scan a dog, the photo is sent to our AI provider (Anthropic)
-          only to identify the breed, and is processed transiently for that
+          to do two things in one step: identify the breed, and check that the
+          picture is a dog and is safe. It's processed transiently for that
           request — it isn't retained or used for training.
+        </p>
+        <p>
+          If a photo isn't a dog, or looks unsafe, you'll just see "that's not a
+          dog" and the scan won't count against your weekly limit. We record that
+          it happened so we can keep the app safe. Repeated unsafe photos pause
+          scanning on the account — the rest of the app keeps working, and you can
+          email us to sort it out.
+        </p>
+        <p>
+          <strong>One exception to "not retained":</strong> if a photo appears to
+          sexually exploit a child, we keep a copy in private storage so a person
+          can review it, and we pause the account immediately. That copy isn't
+          visible to you or to anyone but us, and we may be required to report it
+          to the authorities.
         </p>
 
         <h2>Feedback you send us</h2>
@@ -79,7 +94,8 @@
         <h2>What we never do</h2>
         <p>
           No selling data. No advertising trackers. No making your collection or
-          photos public. No sharing with third parties except the infrastructure
+          photos public. No using any photo — including one kept for safety
+          review — to train AI. No sharing with third parties except the infrastructure
           needed to run the app: our database and hosting (Supabase), the AI
           breed-identifier (Anthropic), our email provider (Resend), and our
           issue tracker for feedback (GitHub). We may use and share aggregated,
@@ -99,6 +115,11 @@
           <li>Delete your account and its data any time — email us and we'll erase it.</li>
           <li>Unconfirmed parent emails: deleted after 14 days.</li>
           <li>Children's accounts inactive for 18 months are deleted.</li>
+          <li>
+            Safety records (that a photo was flagged, and when) are kept while the
+            account exists. A retained unsafe photo is kept until it has been
+            reviewed, and for as long as the law requires us to keep it.
+          </li>
         </ul>
 
         <h2>Parents' rights (COPPA)</h2>
