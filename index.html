@@ -79,12 +79,14 @@
         <p>
           <a href="/privacy.html">Privacy Policy</a>
           <span class="dot">·</span>
-          <!-- Contact: privacy@barkbookapp.com forwarding is being set up at the
-               registrar alongside this site's DNS; it goes live before real
-               traffic. CARRIED TASK: rotate the consent-email reply-to secret
-               (CONSENT_REPLY_TO) to this same privacy@ address once forwarding
-               is confirmed, so no personal inbox is exposed anywhere. -->
-          <a href="mailto:privacy@barkbookapp.com">privacy@barkbookapp.com</a>
+          <a href="/support.html">Support</a>
+          <span class="dot">·</span>
+          <!-- Two addresses, on purpose (Barkbook 13.5): support@ is where a human
+               answers "something is wrong with the app"; privacy@ stays the one the
+               policy names for data requests. Both forward to the owner's inbox via
+               ImprovMX. CARRIED TASK: rotate the consent-email reply-to secret
+               (CONSENT_REPLY_TO) to privacy@ so no personal inbox is exposed. -->
+          <a href="mailto:support@barkbookapp.com">support@barkbookapp.com</a>
         </p>
         <p class="muted">© 2026 Barkbook · log and collect the dog breeds you meet</p>
       </footer>
